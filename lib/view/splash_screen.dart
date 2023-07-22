@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:scart/view/home_screen.dart';
+import 'package:scart/constant/color.dart';
+
 import 'package:scart/view/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -25,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // ignore: todo
 
     return Scaffold(
-      backgroundColor: Color.fromRGBO(187, 255, 0, 1),
+      backgroundColor: MyColor.green,
       body: Center(
         child: Stack(
           children: [
@@ -33,9 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Text(
                 "اسکارت",
                 style: TextStyle(
-                    color: Colors.grey.shade900,
-                    fontFamily: 'Kenar',
-                    fontSize: 40),
+                    color: MyColor.grey, fontFamily: 'Kenar', fontSize: 40),
               ),
             ),
             const SizedBox(
