@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scart/constant/color.dart';
+import 'package:scart/var.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -10,6 +11,7 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   TextEditingController myControllername = TextEditingController();
+  TextEditingController myControllerpass = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,11 +24,17 @@ class _LoginState extends State<Login> {
               Text(
                 'اسکارت',
                 style: TextStyle(
-                    color: MyColor.grey, fontFamily: 'Kenar', fontSize: 40),
+                    color: MyColor.green, fontFamily: 'Kenar', fontSize: 40),
               ),
-              SizedBox(
-                height: 30,
+              Text(
+                'خوش آمدید ، وارد حساب کاربری خود شوید',
+                style: TextStyle(
+                    color: MyColor.gray,
+                    fontFamily: 'kalame',
+                    fontSize: 13,
+                    fontWeight: FontWeight.w700),
               ),
+              SpacerH(30),
               SizedBox(
                 height: 54,
                 width: 310,
@@ -44,7 +52,7 @@ class _LoginState extends State<Login> {
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                        color: Colors.green,
+                        color: MyColor.green,
                       )),
                       border: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -68,15 +76,13 @@ class _LoginState extends State<Login> {
                       floatingLabelAlignment: FloatingLabelAlignment.start),
                 ),
               ),
-              SizedBox(
-                height: 20,
-              ),
+              SpacerH(20),
               SizedBox(
                 height: 54,
                 width: 310,
                 child: TextFormField(
                   obscureText: true,
-                  controller: myControllername,
+                  controller: myControllerpass,
                   textAlign: TextAlign.right,
                   style: TextStyle(
                     fontSize: 13,
@@ -89,7 +95,7 @@ class _LoginState extends State<Login> {
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                        color: Colors.grey,
+                        color: MyColor.green,
                       )),
                       border: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -113,6 +119,24 @@ class _LoginState extends State<Login> {
                       floatingLabelAlignment: FloatingLabelAlignment.start),
                 ),
               ),
+              SpacerH(10),
+              SizedBox(
+                width: 310,
+                child: Row(
+                  children: [
+                    Text(
+                      'رمز عبور خود را فراموش کردید؟',
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: MyColor.green,
+                          decoration: TextDecoration.none,
+                          fontFamily: 'Kalame',
+                          fontWeight: FontWeight.w700),
+                    ),
+                  ],
+                ),
+              ),
+              SpacerH(30),
               InkWell(
                 onTap: () {
                   // GFToast.showToast(
@@ -139,7 +163,7 @@ class _LoginState extends State<Login> {
                         color: MyColor.green,
                         borderRadius: BorderRadius.circular(7)),
                     child: Text(
-                      "تکمیل ثبت نام",
+                      "ورود به حساب کاربری",
                       style: TextStyle(
                           fontSize: 15,
                           color: Colors.white,
@@ -149,7 +173,31 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                 ),
-              )
+              ),
+              SpacerH(10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'ثبت نام نکردید؟',
+                    style: TextStyle(
+                        fontSize: 15,
+                        color: MyColor.gray,
+                        decoration: TextDecoration.none,
+                        fontFamily: 'Kalame',
+                        fontWeight: FontWeight.w700),
+                  ),
+                  Text(
+                    'ساختن حساب کاربری',
+                    style: TextStyle(
+                        fontSize: 15,
+                        color: MyColor.green,
+                        decoration: TextDecoration.none,
+                        fontFamily: 'Kalame',
+                        fontWeight: FontWeight.w700),
+                  ),
+                ],
+              ),
             ]),
       ),
     );

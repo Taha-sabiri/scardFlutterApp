@@ -34,14 +34,14 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Text(
                 "اسکارت",
                 style: TextStyle(
-                    color: MyColor.grey, fontFamily: 'Kenar', fontSize: 40),
+                    color: MyColor.white, fontFamily: 'Kenar', fontSize: 40),
               ),
             ),
             const SizedBox(
               height: 5,
             ),
             const SpinKitSpinningLines(
-              color: Color.fromARGB(22, 0, 0, 0),
+              color: Colors.white10,
               size: 300.0,
             )
           ],
