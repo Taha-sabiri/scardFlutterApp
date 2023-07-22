@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scart/constant/color.dart';
 import 'package:scart/var.dart';
+import 'package:scart/view/home_screen.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -151,8 +152,8 @@ class _LoginState extends State<Login> {
                   //       fontFamily: 'Kalame',
                   //       fontWeight: FontWeight.w700),
                   // );
-                  // Navigator.of(context).push(
-                  //     MaterialPageRoute(builder: (context) => ));
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Home()));
                 },
                 child: SizedBox(
                   height: 54,
